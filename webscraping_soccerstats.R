@@ -5,9 +5,6 @@ library(DT)
 library(dplyr)
 library(formattable)
 library(stringr)
-library(lubridate)
-library(formattable)
-library(chron)
 setwd('C:/Users/User/Desktop/ANALISES/WEBSCRAPING SOCCERSTATS NO R')
 url1 <- 'https://www.soccerstats.com/matches.asp?matchday=1&listing=1'
 url2 <- 'https://www.soccerstats.com/matches.asp?matchday=1&listing=2'
@@ -44,12 +41,7 @@ df_maxrate <- filter(df_med, `OVER2.5%` > 75)
 for (i in 5:8) {
   df_maxrate[[i]] <- paste0(df_maxrate[[i]], '%')
 }
-
-#df_maxrate$Hora <-   
-
-#####with_tz(hm(df_maxrate$Hora),time = 'POSIXlt', tzone = 'America/Sao Paulo')
-
 write.xlsx(df_maxrate, file = "analise_jogos_hj.xlsx")
 rm(list = c("dd1","dd2","df","df_med","i","tb1","tb2","url1","url2"))
-str(df_maxrate)
+
 
