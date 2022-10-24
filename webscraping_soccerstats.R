@@ -5,7 +5,7 @@ library(DT)
 library(dplyr)
 library(formattable)
 library(stringr)
-setwd('C:/Users/User/Desktop/ANALISES/WEBSCRAPING SOCCERSTATS NO R')
+
 url1 <- 'https://www.soccerstats.com/matches.asp?matchday=1&listing=1'
 url2 <- 'https://www.soccerstats.com/matches.asp?matchday=1&listing=2'
 tb1 <- read_html(url1) %>% html_table()
